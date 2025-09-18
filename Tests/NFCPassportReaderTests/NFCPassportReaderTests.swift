@@ -5,7 +5,7 @@ import OSLog
 
 @testable import NFCPassportReader
 
-public func XCTAssertNoThrow<T>(_ expression: @autoclosure () throws -> T, _ message: String = "", file: StaticString = #file, line: UInt = #line, also validateResult: (T) -> Void) {
+    public func XCTAssertNoThrow<T>(_ expression: @autoclosure () throws -> T, _ message: String = "", file: StaticString = #file, line: UInt = #line, also validateResult: (T) -> Void) {
     func executeAndAssignResult(_ expression: @autoclosure () throws -> T, to: inout T?) rethrows {
         to = try expression()
     }
